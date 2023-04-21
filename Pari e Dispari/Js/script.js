@@ -1,4 +1,4 @@
-//Scrivo le costanti
+//Scrivo le variabili
 let sceltaUtente = "";
 let numeroUtente = 0;
 let numeroRandom = 0;
@@ -18,3 +18,25 @@ do {
 //Genero un numero randomico da 1 a 5
 numeroRandom = randomGenerator1_5();
 
+//Creo la variabile somma
+let somma = numeroUtente + numeroRandom;
+
+//Creo le condizioni per capire chi ha vinto
+if (numeroUtente == isPariOrDispari(somma)) {
+    alert("Hai vinto!");
+} else {
+    alert("Hai perso!");
+}
+
+//Creo le funzioni
+function randomGenerator1_5() {
+    return Math.floor(Math.random() * 5) + 1;
+}
+
+function isPariOrDispari(somma) {
+    if (somma % 2 == 0) {
+        return "pari";
+    } else {
+        return "dispari";
+    }
+}
